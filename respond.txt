@@ -1,0 +1,22 @@
+Here's the code in javascript that explains the difference between `res.send()` and `res.status()` in Node.js:
+
+`res.send()` is a method used in Node.js that sends a response to the client and terminates the response process. This method sends the HTTP response to the client in the form of data that is passed in the parameter.
+
+`res.status()` is a method used in Node.js that sets the HTTP status code for the response. This method sets the status code of the HTTP response to the code passed in the parameter.
+
+```javascript
+// Example using res.send()
+
+app.get('/', function(req, res) {
+  res.send('Hello World!');
+});
+
+// Example using res.status()
+
+app.get('/', function(req, res) {
+  res.status(200);
+  res.send('Hello World!');
+});
+```
+
+In the above examples, `res.send()` is used to send data ('Hello World!') as the response. Whereas, `res.status()` is used to set the HTTP status code (200) for the response.
